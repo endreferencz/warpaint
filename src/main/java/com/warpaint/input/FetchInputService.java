@@ -31,7 +31,7 @@ public class FetchInputService {
 		}
 	}
 
-	private Input processElements(Iterator<Price> elements) {
+	public Input processElements(Iterator<Price> elements) {
 		Price nextDayPrice = null;
 		Price nextMonthPrice = null;
 		Price firstPrice = null;

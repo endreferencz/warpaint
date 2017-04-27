@@ -22,4 +22,9 @@ public class Input {
 		return changes;
 	}
 
+	@Override
+	public String toString() {
+		return "Input [lastPrice=" + lastPrice + ", changes=" + changes + "]";
+	}
+
 }

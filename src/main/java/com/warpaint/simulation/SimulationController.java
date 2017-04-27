@@ -16,7 +16,7 @@ import com.warpaint.storage.StorageService;
 public class SimulationController {
 
 	@Autowired
-	private SimulationService simulationService;
+	private MultithreadSimulationService simulationService;
 
 	@Autowired
 	private StorageService storageService;
