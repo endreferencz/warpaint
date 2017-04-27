@@ -1,5 +1,6 @@
 package com.warpaint.input.model;
 
+import java.text.NumberFormat;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -25,8 +26,15 @@ public class Change {
 		return LocalDateFormatter.format(month);
 	}
 
+	@JsonIgnore
 	public double getChange() {
 		return change;
+	}
+
+	public String getFormattedChange() {
+		NumberFormat percentFormat = NumberFormat.getPercentInstance();
+		percentFormat.setMinimumFractionDigits(1);
+		return percentFormat.format(change - 1);
 	}
 
 	@Override
